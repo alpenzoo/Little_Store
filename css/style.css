@@ -6,8 +6,7 @@
 }
 
 .logo {
-    height: 100%;
-    margin-top: 15px;
+    margin: 15px 0 0 30px;
 }
 
 .main {
@@ -33,22 +32,23 @@
     color: #ff8c00;
 }
 
-.cart {
-    color: #985f0d;
-    font-size: 22px;
-    line-height: 44px;
-}
-
-.cart:hover {
-    color: #ff8c00;
-    text-decoration: none;
-}
 
 .cart-image {
     float: left;
 }
 
 .cart-container {
-    width: 35%;
+    width: 15%;
     margin-top: 40px;
 }
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+    .cart-container {
+        width: 25%;
+        margin-top: 0;
+    }
+ }
