@@ -1,0 +1,54 @@
+.topsection {
+    background-color: #fdc766;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo {
+    height: 100%;
+    margin-top: 15px;
+}
+
+.main {
+    background-color: #adff2f;
+}
+
+.icon-bar {
+    background-color: #985f0d;
+}
+
+.navbar-collapse.collapse {
+    margin-top: 40px;
+}
+
+.navbar-nav>li>a {
+    /*line-height: 92px;*/
+    color: #985f0d;
+    font-size: 22px;
+}
+
+.navbar-nav>li>a:hover {
+    background-color: transparent;
+    color: #ff8c00;
+}
+
+.cart {
+    color: #985f0d;
+    font-size: 22px;
+    line-height: 44px;
+}
+
+.cart:hover {
+    color: #ff8c00;
+    text-decoration: none;
+}
+
+.cart-image {
+    float: left;
+}
+
+.cart-container {
+    width: 35%;
+    margin-top: 40px;
+}
