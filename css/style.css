@@ -1,3 +1,8 @@
+.main-container {
+    background: url("../img/blocks-bg.jpg") no-repeat;
+    background-size: cover;
+}
+
 .topsection {
     background-color: #fdc766;
     position: fixed;
@@ -6,11 +11,12 @@
 }
 
 .logo {
-    margin: 15px 0 0 30px;
+    margin: 15px 0 5px 30px;
 }
 
-.main {
-    background-color: #adff2f;
+.content {
+    padding-top: 180px;
+    background-color: rgba(0, 0, 0, .6);
 }
 
 .icon-bar {
@@ -34,21 +40,26 @@
 
 
 .cart-image {
-    float: left;
+    margin: 40px 20px 0 0;
 }
 
-.cart-container {
-    width: 15%;
-    margin-top: 40px;
+.underlined {
+    height: 7px;
+    background-color: #985f0d;
 }
+
+.underlined-second {
+    height: 4px;
+    background-color: #fdc766;
+}
+
 
 @media (max-width: 992px) {
 
 }
 
 @media (max-width: 768px) {
-    .cart-container {
-        width: 25%;
-        margin-top: 0;
+    .cart-image {
+       margin-top: 0;
     }
  }
