@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="storeApp" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Pizza Shop</title>
@@ -9,11 +9,17 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/angular.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/StoreController.js"></script>
+
+    <script src="js/lib/jquery.min.js"></script>
+
+
 </head>
-<body>
+<body ng-controller="StoreController as store">
     <div class="main-container">
         <header class="topsection">
             <div class="row">
@@ -47,151 +53,19 @@
         </header>
         <section class="container-fluid content">
             <div class="row gallery">
-                <div class="col-md-3 col-sm-4 col-xs-6 gallery-item center-block">
+                <div ng-repeat="pizza in pizzas" class="col-md-3 col-sm-4 col-xs-6 gallery-item center-block">
                     <div class="gallery-img">
-                        <img src="img/margarita.jpg" alt="Margarita" class="img-responsive center-block">
+                        <img ng-src="{{ pizza.cover }}" class="img-responsive center-block">
                     </div>
                     <div class="gallery-text text-center">
-                        TEST
+                        {{ pizza.name }}
                     </div>
                     <div class="gallery-row clearfix">
-                        <div class="gallery-text gallery-price">TEST</div>
+                        <div class="gallery-text gallery-price">{{ pizza.price | currency }}</div>
                         <input type="button" class="btn btn-warning gallery-button" value="Buy">
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-4 col-xs-6 gallery-item">
-                    <div class="gallery-img">
-                        <img src="img/margarita.jpg" alt="Margarita" class="img-responsive center-block">
-                    </div>
-                    <div class="gallery-text text-center">
-                        TEST
-                    </div>
-                    <div class="gallery-row clearfix">
-                        <div class="gallery-text gallery-price">TEST</div>
-                        <input type="button" class="btn btn-warning gallery-button" value="Buy">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-6 gallery-item">
-                    <div class="gallery-img">
-                        <img src="img/margarita.jpg" alt="Margarita" class="img-responsive center-block">
-                    </div>
-                    <div class="gallery-text text-center">
-                        TEST
-                    </div>
-                    <div class="gallery-row clearfix">
-                        <div class="gallery-text gallery-price">TEST</div>
-                        <input type="button" class="btn btn-warning gallery-button" value="Buy">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-6 gallery-item">
-                    <div class="gallery-img">
-                        <img src="img/margarita.jpg" alt="Margarita" class="img-responsive center-block">
-                    </div>
-                    <div class="gallery-text text-center">
-                        TEST
-                    </div>
-                    <div class="gallery-row clearfix">
-                        <div class="gallery-text gallery-price">TEST</div>
-                        <input type="button" class="btn btn-warning gallery-button" value="Buy">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-6 gallery-item">
-                    <div class="gallery-img">
-                        <img src="img/margarita.jpg" alt="Margarita" class="img-responsive center-block">
-                    </div>
-                    <div class="gallery-text text-center">
-                        TEST
-                    </div>
-                    <div class="gallery-row clearfix">
-                        <div class="gallery-text gallery-price">TEST</div>
-                        <input type="button" class="btn btn-warning gallery-button" value="Buy">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-6 gallery-item">
-                    <div class="gallery-img">
-                        <img src="img/margarita.jpg" alt="Margarita" class="img-responsive center-block">
-                    </div>
-                    <div class="gallery-text text-center">
-                        TEST
-                    </div>
-                    <div class="gallery-row clearfix">
-                        <div class="gallery-text gallery-price">TEST</div>
-                        <input type="button" class="btn btn-warning gallery-button" value="Buy">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-6 gallery-item">
-                    <div class="gallery-img">
-                        <img src="img/margarita.jpg" alt="Margarita" class="img-responsive center-block">
-                    </div>
-                    <div class="gallery-text text-center">
-                        TEST
-                    </div>
-                    <div class="gallery-row clearfix">
-                        <div class="gallery-text gallery-price">TEST</div>
-                        <input type="button" class="btn btn-warning gallery-button" value="Buy">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-6 gallery-item">
-                    <div class="gallery-img">
-                        <img src="img/margarita.jpg" alt="Margarita" class="img-responsive center-block">
-                    </div>
-                    <div class="gallery-text text-center">
-                        TEST
-                    </div>
-                    <div class="gallery-row clearfix">
-                        <div class="gallery-text gallery-price">TEST</div>
-                        <input type="button" class="btn btn-warning gallery-button" value="Buy">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-6 gallery-item">
-                    <div class="gallery-img">
-                        <img src="img/margarita.jpg" alt="Margarita" class="img-responsive center-block">
-                    </div>
-                    <div class="gallery-text text-center">
-                        TEST
-                    </div>
-                    <div class="gallery-row clearfix">
-                        <div class="gallery-text gallery-price">TEST</div>
-                        <input type="button" class="btn btn-warning gallery-button" value="Buy">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-6 gallery-item">
-                    <div class="gallery-img">
-                        <img src="img/margarita.jpg" alt="Margarita" class="img-responsive center-block">
-                    </div>
-                    <div class="gallery-text text-center">
-                        TEST
-                    </div>
-                    <div class="gallery-row clearfix">
-                        <div class="gallery-text gallery-price">TEST</div>
-                        <input type="button" class="btn btn-warning gallery-button" value="Buy">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-6 gallery-item">
-                    <div class="gallery-img">
-                        <img src="img/margarita.jpg" alt="Margarita" class="img-responsive center-block">
-                    </div>
-                    <div class="gallery-text text-center">
-                        TEST
-                    </div>
-                    <div class="gallery-row clearfix">
-                        <div class="gallery-text gallery-price">TEST</div>
-                        <input type="button" class="btn btn-warning gallery-button" value="Buy">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-6 gallery-item">
-                    <div class="gallery-img">
-                        <img src="img/margarita.jpg" alt="Margarita" class="img-responsive center-block">
-                    </div>
-                    <div class="gallery-text text-center">
-                        TEST
-                    </div>
-                    <div class="gallery-row clearfix">
-                        <div class="gallery-text gallery-price">TEST</div>
-                        <input type="button" class="btn btn-warning gallery-button" value="Buy">
-                    </div>
-                </div>
-            </div>
+             </div>
         </section>
         <div class="row underlined-second"></div>
         <div class="row underlined"></div>
