@@ -1,6 +1,6 @@
 .main-container {
     background: url("../img/blocks-bg.jpg") repeat-y;
-    /*background-size: cover;*/
+    min-height: 100vh;
 }
 
 .clearfix:after {
@@ -27,6 +27,7 @@
     padding-top: 180px;
     background-color: rgba(0, 0, 0, .6);
     max-width: 1200px;
+    min-height: 920px;
 }
 
 .icon-bar {
@@ -114,13 +115,20 @@
     padding: 15px;
 }
 
-
+.about {
+    color: #fff;
+    height: 400px;
+    padding-left: 20px;
+}
 
 @media (max-width: 768px) {
     .cart-image {
        margin-top: 0;
     }
- }
+
+    .content {
+        padding-top: 260px;
+    }
 
 @media (max-width: 581px) {
     .gallery-item {
