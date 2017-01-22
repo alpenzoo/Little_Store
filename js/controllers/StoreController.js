@@ -4,10 +4,8 @@
         .module('storeApp')
         .controller('StoreController', StoreController);
 
-    StoreController.$inject = ["$scope"];
-
-    function StoreController($scope) {
-        $scope.pizzas = [
+    function StoreController() {
+        this.pizzas = [
             {
                 name: 'Margherita',
                 cover: 'img/margarita.jpg',
@@ -79,6 +77,15 @@
                 cover: 'img/vega.jpg',
                 price: 5.2
             }
-        ]
+        ];
+
+        this.basket = [];
+        this.amount = 0;
+
+        this.addToBasket = function(item) {
+            this.basket.push(this.pizzas[item]);
+            this.title = this.basket.slice(-1)[0].name;
+            this.amount += this.basket.slice(-1)[0].price;
+        }
     }
 })();

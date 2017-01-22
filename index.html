@@ -52,10 +52,22 @@
                     </div>
                 </nav>
                 <div class="col-md-4 col-sm-4 col-xs-6">
-                    <a href="#!/basket">
-                        <img class="cart-image pull-right" src="img/basket.png" alt="Cart" class="img-responsive">
-                    </a>
-
+                    <div class="cart-image pull-right">
+                        <img src="img/basket.png" alt="Cart" class="img-responsive">
+                        <div class="shopping-cart">
+                            <div class="shopping-cart-top">
+                                <p>Added to cart</p>
+                                <span>{{ store.title }}</span>
+                                <a href=""><strong>x</strong></a>
+                            </div>
+                            <div class="shopping-cart-bottom">
+                                <input type="button" class="btn btn-danger" value="Purchase">
+                                <span class="sum">{{ store.amount | currency }}</span>
+                            </div>
+                            <div class="underlined"></div>
+                            <div class="underlined-second"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row underlined"></div>
