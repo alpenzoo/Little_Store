@@ -54,11 +54,11 @@
                 <div class="col-md-4 col-sm-4 col-xs-6">
                     <div class="cart-image pull-right">
                         <img src="img/basket.png" alt="Cart" class="img-responsive">
-                        <div class="shopping-cart">
+                        <div ng-if="store.showCart" class="shopping-cart">
                             <div class="shopping-cart-top">
                                 <p>Added to cart</p>
-                                <span>{{ store.title }}</span>
-                                <a href=""><strong>x</strong></a>
+                                <span><em>{{ store.title }}</em></span>
+                                <a ng-click="store.showCart=false" href=""><strong>x</strong></a>
                             </div>
                             <div class="shopping-cart-bottom">
                                 <input type="button" class="btn btn-danger" value="Purchase">

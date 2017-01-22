@@ -81,11 +81,14 @@
 
         this.basket = [];
         this.amount = 0;
+        this.showCart = false;
 
         this.addToBasket = function(item) {
             this.basket.push(this.pizzas[item]);
             this.title = this.basket.slice(-1)[0].name;
             this.amount += this.basket.slice(-1)[0].price;
+            this.showCart = true;
+
         }
     }
 })();
