@@ -53,7 +53,10 @@
                 </nav>
                 <div class="col-md-4 col-sm-4 col-xs-6">
                     <div class="cart-image pull-right">
-                        <img src="img/basket.png" alt="Cart" class="img-responsive">
+                        <a href="#!/basket">
+                            <img src="img/basket.png" alt="Cart" class="img-responsive">
+                        </a>
+                        <div ng-if="store.showAmount" class="shopping-amount"><strong>{{ store.amount }}</strong></div>
                         <div ng-if="store.showCart" class="shopping-cart">
                             <div class="shopping-cart-top">
                                 <p>Added to cart</p>
@@ -62,7 +65,7 @@
                             </div>
                             <div class="shopping-cart-bottom">
                                 <input type="button" class="btn btn-danger" value="Purchase">
-                                <span class="sum">{{ store.amount | currency }}</span>
+                                <span class="sum">{{ store.cost | currency }}</span>
                             </div>
                             <div class="underlined"></div>
                             <div class="underlined-second"></div>

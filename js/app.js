@@ -11,11 +11,11 @@ angular
 
             .when('/about', {
                 templateUrl : 'views/about.html',
-                // controller  : 'StoreController'
+                controller  : 'StoreController'
             })
 
             .when('/basket', {
                 templateUrl : 'views/basket.html',
-                // controller  : 'StoreController'
+                controller  : 'StoreController'
             })
     });

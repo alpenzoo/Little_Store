@@ -5,90 +5,112 @@
         .controller('StoreController', StoreController);
 
     function StoreController() {
+        //Array of pizzas in stock
         this.pizzas = [
             {
                 name: 'Margherita',
                 cover: 'img/margarita.jpg',
-                price: 5.1
+                price: 5.1,
+                amount: 1
             },
 
             {
                 name: 'Margherita Chile',
                 cover: 'img/margarita-chili.jpg',
-                price: 5.2
+                price: 5.2,
+                amount: 1
             },
 
             {
                 name: 'Hawaii',
                 cover: 'img/gavayskaya.jpg',
-                price: 7.15
+                price: 7.15,
+                amount: 1
             },
 
             {
                 name: 'Havana',
                 cover: 'img/gavana.jpg',
-                price: 5.85
+                price: 5.85,
+                amount: 1
             },
 
             {
                 name: 'Hunter',
                 cover: 'img/hunter.jpg',
-                price: 6.8
+                price: 6.8,
+                amount: 1
             },
 
             {
                 name: 'Jamaica',
                 cover: 'img/jamaica.jpg',
-                price: 6.9
+                price: 6.9,
+                amount: 1
             },
 
             {
                 name: 'Munich',
                 cover: 'img/munich.jpg',
-                price: 6.5
+                price: 6.5,
+                amount: 1
             },
 
             {
                 name: 'Nicosian',
                 cover: 'img/nicosya.jpg',
-                price: 6.5
+                price: 6.5,
+                amount: 1
             },
 
             {
                 name: 'Pepperoni',
                 cover: 'img/pepperoni.jpg',
-                price: 5.8
+                price: 5.8,
+                amount: 1
             },
 
             {
                 name: 'Picante',
                 cover: 'img/picante.jpg',
-                price: 6.15
+                price: 6.15,
+                amount: 1
             },
 
             {
                 name: 'Student',
                 cover: 'img/student.jpg',
-                price: 5.35
+                price: 5.35,
+                amount: 1
             },
 
             {
                 name: 'Vegan',
                 cover: 'img/vega.jpg',
-                price: 5.2
+                price: 5.2,
+                amount: 1
             }
         ];
 
-        this.basket = [];
-        this.amount = 0;
-        this.showCart = false;
 
+        this.basket = []; //array of pizzas user added to shopping cart
+        this.cost = 0; //total cost of added pizzas
+        this.amount = 0; //total pizzas amount
+        this.showCart = false; //visibility of shopping cart div while user doesn't buy any pizza
+        this.showAmount = false; //visibility of pizzas amount
         this.addToBasket = function(item) {
-            this.basket.push(this.pizzas[item]);
-            this.title = this.basket.slice(-1)[0].name;
-            this.amount += this.basket.slice(-1)[0].price;
+            if(this.basket.length > 0 && (this.basket.indexOf(item) != -1)) {
+                this.basket[this.basket.indexOf(item)].amount ++;
+            }
+            else {
+                this.basket.push(item);
+            }
+            this.title = item.name; //show name of last added pizza
+            this.cost += item.price; //show total cost
+            this.amount ++;
             this.showCart = true;
-
+            this.showAmount = true;
+            console.log(this.basket);
         }
     }
 })();
