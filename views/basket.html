@@ -1,5 +1,35 @@
 <!--HTML code to show shopping cart page-->
 
 <div class="row">
- 12121212
+   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+       <h4>Your order</h4>
+       <div class="basket-wrap">
+            <div ng-repeat="pizza in store.basket" class="row basket-product">
+                <div class="col-xs-6">
+                    <img class="img-responsive" ng-src="{{ pizza.cover }}" alt="">
+                </div>
+                <div class="col-xs-6">
+                    <button ng-click="store.removeItem(pizza)" class="basket-close">X</button>
+                    <p><strong>{{ pizza.name }}</strong></p>
+                    <p>{{ pizza.price | currency }}</p>
+                    <div class="row quantity">
+                        <input disabled class="col-xs-6 quantity-num" type="text" name="quantity" min="1" ng-model="pizza.amount">
+                        <div class="col-xs-6 plusminus">
+                            <button ng-click="store.changeAmount(pizza, 1)"  data-type="plus">+</button>
+                            <button ng-click="store.changeAmount(pizza, -1)" data-type="minus">-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+   </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 shopping-form">
+
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 paycont-form">
+
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 shop-cart-button">
+
+    </div>
 </div>

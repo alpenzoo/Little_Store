@@ -64,7 +64,9 @@
                                 <a ng-click="store.showCart=false" href=""><strong>x</strong></a>
                             </div>
                             <div class="shopping-cart-bottom">
-                                <input type="button" class="btn btn-danger" value="Purchase">
+                                <a href="#!/basket" class="cartButton">
+                                    <button ng-click="store.showCart = false" class="btn btn-danger">Purchase</button>
+                                </a>
                                 <span class="sum">{{ store.cost | currency }}</span>
                             </div>
                             <div class="underlined"></div>

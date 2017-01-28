@@ -3,6 +3,10 @@
     min-height: 100vh;
 }
 
+h4 {
+    color: #fff;
+}
+
 .clearfix:after {
     visibility: hidden;
     display: block;
@@ -163,37 +167,110 @@
 }
 
 .shopping-amount {
+    position: absolute;
+    top: 48px;
+    right: 110px;
     border: 1px solid transparent;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 14px;
     background-color: #985f0d;
-    position: absolute;
-    top: 48px;
-    right: 110px;
     width: 20px;
     line-height: 18px;
     color: #fff;
     text-align: center;
 }
 
+.shopping-cart a.cartButton {
+    position: static;
+    display: inline;
+}
+
+.basket-wrap {
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.basket-product {
+    box-sizing: border-box;
+    border: 1px solid #adadad;
+    width: 100%;
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.basket-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.quantity {
+    margin: 0;
+    padding-left: 30%;
+}
+
+.quantity p {
+    width: 80%;
+}
+
+.quantity-num {
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #adadad;
+}
+
+.plusminus {
+    padding: 0;
+    width: 20px;
+}
+
+.plusminus button{
+    background-color: transparent;
+    border: 1px solid #adadad;
+    width: 20px;
+    line-height: 14px;
+    height: 20px;
+    padding: 0;
+    margin: 0px;
+}
+
 @media (max-width: 768px) {
     .cart-image {
-       margin-top: 0;
+        margin-top: 0;
         margin-right: 20px;
     }
 
     .shopping-cart {
         top: 4em;
         right: 2.5em;
-     }
+    }
 
     .content {
         padding-top: 260px;
     }
 
+    .quantity {
+        padding-left: 40%;
+    }
+}
+
 @media (max-width: 581px) {
     .gallery-item {
         width: 100%;
+    }
+}
+
+@media (max-width: 441px) {
+    .quantity {
+        padding-left: 22%;
     }
 }

@@ -110,7 +110,22 @@
             this.amount ++;
             this.showCart = true;
             this.showAmount = true;
-            console.log(this.basket);
+        };
+
+        this.removeItem = function(item) {
+            this.amount -= item.amount;
+            this.basket.splice(this.basket.indexOf(item),1);
+        };
+
+        this.changeAmount = function (item, increment) {
+            item.amount += increment;
+            this.amount += increment;
+            this.cost += item.price*increment;
+            if (item.amount === 0) {
+                this.removeItem(item);
+            }
         }
+
+
     }
 })();
