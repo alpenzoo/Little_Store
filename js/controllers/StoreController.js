@@ -114,6 +114,7 @@
 
         this.removeItem = function(item) {
             this.amount -= item.amount;
+            this.cost -= item.amount*item.price;
             this.basket.splice(this.basket.indexOf(item),1);
         };
 

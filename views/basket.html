@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 shopping-form">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 shopping-form">
             <h4>Fill the form</h4>
             <form>
                 <input type="text" placeholder="Name">
@@ -34,24 +34,22 @@
                 <textarea name="text" placeholder="Your comments"></textarea>
             </form>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 paycont-form">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 paycont-form">
             <h4>Payment</h4>
-            <div class="shopping-cart-total">
+            <div class="basket-total">
                 <p class="col-xs-6 col-sm-6 col-md-6 text-left">
                     <b>Total</b>
                 </p>
                 <p class="col-xs-6 col-sm-6 col-md-6 text-right total-sum"><b>{{ store.cost |currency }}</b></p>
             </div>
-            <form class="form_pay ng-pristine ng-valid" action="">
+            <form class=" text-center" action="">
                 <input id="pay-cash" type="radio" name="pay" value="paycash" checked="checked">
                 <label for="pay-cash">Cash</label>
                 <input id="pay-cart" type="radio" name="pay" value="paycart">
                 <label for="pay-cart">Credit card</label>
             </form>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 shop-cart-button">
-            <button class="btn btn-warning">Order now</button>
-            <button class="btn btn-warning">Call me</button>
+            <button class="btn btn-warning center-block">Order now</button>
+            <button class="btn btn-warning center-block">Call me</button>
         </div>
     </div>
 </div>
