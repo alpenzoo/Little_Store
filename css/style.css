@@ -300,6 +300,7 @@ button:focus, button:active, input[type="button"]:focus, input[type="button"]:ac
         top: 0px;
         right: 32px;
     }
+}
 
 @media (max-width: 581px) {
     .gallery-item {

@@ -1,5 +1,5 @@
 angular
-    .module('storeApp', ['ngRoute', 'ui.bootstrap'])
+    .module('storeApp', ['ngRoute', 'ui.bootstrap', 'ngStorage'])
     .config(function($routeProvider) {
         $routeProvider
 

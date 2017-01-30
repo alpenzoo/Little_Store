@@ -4,7 +4,11 @@
         .module('storeApp')
         .controller('StoreController', StoreController);
 
-    function StoreController() {
+    StoreController.$inject = ['$sessionStorage'];
+
+    function StoreController($sessionStorage) {
+        this.storage = $sessionStorage;
+
         //Array of pizzas in stock
         this.pizzas = [
             {
@@ -92,12 +96,27 @@
             }
         ];
 
+        this.updateStorage = function () {
+            this.storage.basket = this.basket;
+            this.storage.amount = this.amount;
+            this.storage.cost = this.cost;
+        };
 
-        this.basket = []; //array of pizzas user added to shopping cart
-        this.cost = 0; //total cost of added pizzas
-        this.amount = 0; //total pizzas amount
-        this.showCart = false; //visibility of shopping cart div while user doesn't buy any pizza
-        this.showAmount = false; //visibility of pizzas amount
+
+        if(this.storage.basket) {
+            this.basket = this.storage.basket;
+            this.cost = this.storage.cost;
+            this.amount = this.storage.amount;
+            this.showAmount = true; //visibility of pizzas amount
+        }
+        else {
+            this.basket = []; //array of pizzas user added to shopping cart
+            this.cost = 0; //total cost of added pizzas
+            this.amount = 0; //total pizzas amount
+            this.showCart = false; //visibility of shopping cart div while user doesn't buy any pizza
+            this.showAmount = false; //visibility of pizzas amount
+        }
+
         this.addToBasket = function(item) {
             if(this.basket.length > 0 && (this.basket.indexOf(item) != -1)) {
                 this.basket[this.basket.indexOf(item)].amount ++;
@@ -110,12 +129,16 @@
             this.amount ++;
             this.showCart = true;
             this.showAmount = true;
+
+            this.updateStorage();
         };
 
         this.removeItem = function(item) {
             this.amount -= item.amount;
             this.cost -= item.amount*item.price;
             this.basket.splice(this.basket.indexOf(item),1);
+
+            this.updateStorage();
         };
 
         this.changeAmount = function (item, increment) {
@@ -125,6 +148,8 @@
             if (item.amount === 0) {
                 this.removeItem(item);
             }
+
+            this.updateStorage();
         }
 
 
