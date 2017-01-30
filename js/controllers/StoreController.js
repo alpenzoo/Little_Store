@@ -107,14 +107,12 @@
             this.basket = this.storage.basket;
             this.cost = this.storage.cost;
             this.amount = this.storage.amount;
-            this.showAmount = true; //visibility of pizzas amount
         }
         else {
             this.basket = []; //array of pizzas user added to shopping cart
             this.cost = 0; //total cost of added pizzas
             this.amount = 0; //total pizzas amount
             this.showCart = false; //visibility of shopping cart div while user doesn't buy any pizza
-            this.showAmount = false; //visibility of pizzas amount
         }
 
         this.addToBasket = function(item) {
@@ -128,7 +126,6 @@
             this.cost += item.price; //show total cost
             this.amount ++;
             this.showCart = true;
-            this.showAmount = true;
 
             this.updateStorage();
         };
