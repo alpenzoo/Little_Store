@@ -4,8 +4,13 @@
 }
 
 h4 {
-    color: #fff;
+    color: #000;
 }
+
+button:focus, button:active, input[type="button"]:focus, input[type="button"]:active {
+    outline: 0 !important;
+}
+
 
 .clearfix:after {
     visibility: hidden;
@@ -186,15 +191,18 @@ h4 {
     display: inline;
 }
 
-.basket-wrap {
-    max-height: 400px;
-    overflow-y: auto;
+.basket {
     background-color: #fff;
+}
+
+.basket-wrap {
+    max-height: 600px;
+    overflow-y: auto;
 }
 
 .basket-product {
     box-sizing: border-box;
-    border: 1px solid #adadad;
+    border: 1px solid #eaeaea;
     width: 100%;
     margin: 0;
     padding: 8px;
@@ -225,7 +233,7 @@ h4 {
     width: 40px;
     text-align: center;
     font-size: 16px;
-    border: 1px solid #adadad;
+    border: 1px solid #eaeaea;
 }
 
 .plusminus {
@@ -235,7 +243,7 @@ h4 {
 
 .plusminus button{
     background-color: transparent;
-    border: 1px solid #adadad;
+    border: 1px solid #eaeaea;
     width: 20px;
     line-height: 14px;
     height: 20px;
