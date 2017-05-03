@@ -7,9 +7,9 @@
             .module('storeApp')
             .controller('StoreController', StoreController);
 
-        StoreController.$inject = ['$sessionStorage', 'GetPizzas'];
+        StoreController.$inject = ['$sessionStorage', 'GetPizzas', '$scope'];
 
-        function StoreController($sessionStorage, GetPizzas) {
+        function StoreController($sessionStorage, GetPizzas, $scope) {
             var that = this;
 
             this.storage = $sessionStorage;
@@ -27,10 +27,7 @@
                         }
                     }
                 });
-
             });
-
-
 
 
 
@@ -87,6 +84,10 @@
                 }
                 console.log(this.basket);
                 this.updateStorage();
+            }
+
+            this.chooseComponent = function(component) {
+                return component;
             }
 
 

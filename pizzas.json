@@ -30,7 +30,7 @@
     "name": "Hunter",
     "cover": "img/hunter.jpg",
     "price": "6.8",
-    "components": ["mustard sauce", "Mozzarella cheese", "smoked sausages", "champignon", "red onion", "bell pepper"]
+    "components": ["mustard sauce", "Mozzarella cheese", "smoked sausages", "mushrooms", "red onion", "bell pepper"]
   },
 
   {
@@ -58,7 +58,7 @@
     "name": "Pepperoni",
     "cover": "img/pepperoni.jpg",
     "price": "5.8",
-    "components": ["mustard sauce", "Mozzarella cheese", "bell pepper", "champignon", "salami"]
+    "components": ["mustard sauce", "Mozzarella cheese", "bell pepper", "mushrooms", "salami"]
   },
 
   {
@@ -72,13 +72,13 @@
     "name": "Student",
     "cover": "img/student.jpg",
     "price": "5.35",
-    "components": ["cream sauce", "Mozzarella cheese", "chicken breast", "champignon", "gherkin"]
+    "components": ["cream sauce", "Mozzarella cheese", "chicken breast", "mushrooms", "gherkin"]
   },
 
   {
     "name": "Vegan",
     "cover": "img/vega.jpg",
     "price": "5.2",
-    "components": ["pizza sauce", "tofu cheese", "champignon", "tomatoes", "green beans"]
+    "components": ["pizza sauce", "tofu cheese", "mushrooms", "tomatoes", "green beans"]
   }
 ]
