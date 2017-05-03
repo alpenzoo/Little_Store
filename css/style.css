@@ -289,10 +289,49 @@ button:focus, button:active, input[type="button"]:focus, input[type="button"]:ac
     padding: 12px;
 }
 
+.pizza-components {
+    display: none;
+}
+
 .visible {
+    display: block;
     visibility: visible;
     opacity: 1;
+    height: auto;
     transition: all 0.5s ease;
+}
+
+.components-wrapper {
+    padding: 25px;
+}
+
+
+
+.component {
+    padding-top: 10px;
+}
+
+.component a {
+    color: #ec971f;
+}
+
+.component a:hover  {
+    color: #ec971f;
+    text-decoration: none;
+}
+
+.component a:focus, .component a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.components-button {
+    font-size: 18px;
+    color: #000;
+}
+
+.components-button:hover,  .components-button:focus, .components-button:active {
+    color: #000!important;
 }
 
 @media (max-width: 768px) {

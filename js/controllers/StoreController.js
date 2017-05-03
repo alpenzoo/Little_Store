@@ -17,12 +17,20 @@
             GetPizzas.async().then(function () {
                 that.pizzas = GetPizzas.data();
 
+                that.components = [];
                 that.pizzas.forEach(function (element) {
                     element.price = parseFloat(element.price);
                     element.amount = 1;
+                    for (var i = 0; i < element.components.length; i++) {
+                        if (that.components.indexOf(element.components[i]) === -1) {
+                            that.components.push(element.components[i]);
+                        }
+                    }
                 });
 
             });
+
+
 
 
 
