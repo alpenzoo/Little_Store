@@ -10,6 +10,10 @@ h4 {
     color: #000;
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
 button:focus, button:active, input[type="button"]:focus, input[type="button"]:active {
     outline: 0 !important;
 }
