@@ -87,6 +87,7 @@ button:focus, button:active, input[type="button"]:focus, input[type="button"]:ac
 }
 
 .gallery-img {
+    position: relative;
     border: 1px solid transparent;
     border-radius: 10px 10px 0 0;
 }
@@ -275,6 +276,23 @@ button:focus, button:active, input[type="button"]:focus, input[type="button"]:ac
 .paycont-form button {
     width: 60%;
     margin-bottom: 10px;
+}
+
+.components {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 116px;
+    width: 100%;
+    background-color: rgba(236,151,31,.8);
+    color: #fff;
+    padding: 12px;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease;
 }
 
 @media (max-width: 768px) {
