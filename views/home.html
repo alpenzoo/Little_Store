@@ -2,8 +2,11 @@
 
 <div class="row gallery">
     <div ng-repeat="pizza in store.pizzas" class="col-md-3 col-sm-4 col-xs-6 gallery-item center-block">
-        <div class="gallery-img">
+        <div class="gallery-img" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false">
             <img ng-src="{{ pizza.cover }}" class="img-responsive center-block">
+            <div class="components" ng-class="{ 'visible': hovering }">
+                {{ pizza.components.toString().split(',').join(', ') }}
+            </div>
         </div>
         <div class="gallery-text text-center">
             {{ pizza.name }}
