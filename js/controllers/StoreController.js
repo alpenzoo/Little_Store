@@ -1,5 +1,3 @@
-//TODO: 3) Add conponent filters to the page
-
 
 (function() {
 
@@ -82,9 +80,8 @@
                     this.basket.splice(this.basket.indexOf(item),1);
                     item.amount ++;
                 }
-                console.log(this.basket);
                 this.updateStorage();
-            }
+            };
 
             this.chooseComponent = function(component) {
                 return component;
